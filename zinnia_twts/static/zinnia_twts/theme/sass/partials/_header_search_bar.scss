@@ -1,0 +1,57 @@
+#header-search-box {
+  position: absolute;
+  right: 38px;
+  top: 8px;
+}
+
+.search-form {
+  display: none;
+  width: 25%;
+  position: absolute;
+  min-width: 200px;
+  right: -6px;
+  top: 33px;
+}
+
+#search-menu {
+  & span {
+    font-size: 20px;
+
+    & .ion-ios-close-empty {
+      font-size: 40px;
+      line-height: 0;
+      position: relative;
+      top: -6px;
+    }
+  }
+}
+
+#searchform {
+  position: relative;
+  border: 1px solid #ddd;
+  min-height: 42px;
+
+  & input[type=search] {
+    width: 100%;
+    border: none;
+    position: absolute;
+    left: 0;
+    padding: 10px 30px 10px 10px;
+    z-index: 99;
+  }
+
+  & button {
+    position: absolute;
+    right: 6px;
+    top: 4px;
+    z-index: 999;
+    background: transparent;
+    border: 0;
+    padding: 0;
+
+    & span {
+      font-size: 22px;
+    }
+  }
+}
+

@@ -1,0 +1,37 @@
+/**
+ * 3.2.1 - Main Nav CSS 3 Hover Effect
+ */
+
+.cl-effect-11 a {
+  padding: 10px 0;
+  color: #0972b4;
+  text-shadow: none;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    padding: 0 0 5px 0 !important;
+    max-width: 0;
+    border-bottom: 1px solid #000;
+    color: #000;
+    content: attr(data-hover);
+    -webkit-transition: max-width 0.5s;
+    -moz-transition: max-width 0.5s;
+    transition: max-width 0.5s;
+  }
+
+  //TODO: combine these
+  &:hover {
+    &::before {
+      max-width: 100%;
+    }
+  }
+
+  &:focus {
+    &::before {
+      max-width: 100%;
+    }
+  }
+}

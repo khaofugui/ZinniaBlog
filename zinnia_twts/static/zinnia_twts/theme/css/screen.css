@@ -1,0 +1,552 @@
+.zinnia {
+  /**
+   * 1.0 - Google Font
+   */
+  @import url(http://fonts.useso.com/css?family=Lato:300,400);
+  @import url(http://fonts.useso.com/css?family=Ubuntu:300,400);
+  /**
+   * 2.0 - General Elements
+   */
+  /**
+   * 3.1 - Logo
+   */
+  /**
+   * 3.2 - Main Navigation
+   */
+  /**
+   * 3.2.1 - Main Nav CSS 3 Hover Effect
+   */
+  /**
+   * 6.0 - Footer
+   */
+  /**
+   * 8.0 - Mobile Menu
+   */
+  /**
+   * 11.0 - Media Query
+   */
+  /**
+   * 5.0 - Widget
+   */
+  /**
+   * 4.0 - Home/Blog
+   */
+  /**
+   * 4.1 - Read More Button CSS 3 style
+   */
+}
+.zinnia * {
+  outline: none;
+}
+.zinnia h1,
+.zinnia h2,
+.zinnia h3,
+.zinnia h4,
+.zinnia h5,
+.zinnia h6 {
+  margin-top: 0;
+}
+.zinnia b {
+  font-weight: 400;
+}
+.zinnia a {
+  color: #333;
+}
+.zinnia a:hover, .zinnia a:focus {
+  text-decoration: none;
+  color: #000;
+}
+.zinnia ::selection {
+  background-color: #eee;
+}
+.zinnia body {
+  color: #444;
+  font-family: 'Lato', sans-serif;
+}
+.zinnia p {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  word-spacing: 1px;
+  letter-spacing: 0.01em;
+}
+.zinnia #single p,
+.zinnia #page p {
+  margin-bottom: 25px;
+}
+.zinnia .page-title {
+  text-align: center;
+}
+.zinnia .title {
+  margin-bottom: 30px;
+}
+.zinnia figure {
+  margin-bottom: 25px;
+}
+.zinnia .img-responsive-center img {
+  margin: 0 auto;
+}
+.zinnia .height-40px {
+  margin-bottom: 40px;
+}
+.zinnia #site-header {
+  background-color: #FFF;
+  padding: 25px 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #e7e7e7;
+}
+.zinnia .copyrights {
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  overflow: hidden;
+}
+.zinnia .logo h1 {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+.zinnia .logo h1 a {
+  color: #000;
+}
+.zinnia .logo h1 a:hover {
+  text-decoration: none;
+  border-bottom: none;
+}
+.zinnia .main-nav {
+  margin-top: 11px;
+  max-width: 95%;
+}
+.zinnia .main-nav a {
+  color: #000000 !important;
+  padding: 0 0 5px 0 !important;
+  margin-right: 30px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+}
+.zinnia .main-nav a:active {
+  background-color: transparent !important;
+  border-bottom: 0;
+}
+.zinnia .main-nav a:focus {
+  background-color: transparent !important;
+  border-bottom: 0;
+}
+.zinnia .main-nav a:hover {
+  background-color: transparent !important;
+  border-bottom: 0;
+}
+.zinnia .navbar-toggle {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  margin-right: 25px;
+}
+.zinnia .navbar-toggle span {
+  font-size: 2em;
+  color: #000;
+}
+.zinnia .cl-effect-11 a {
+  padding: 10px 0;
+  color: #0972b4;
+  text-shadow: none;
+}
+.zinnia .cl-effect-11 a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  padding: 0 0 5px 0 !important;
+  max-width: 0;
+  border-bottom: 1px solid #000;
+  color: #000;
+  content: attr(data-hover);
+  -webkit-transition: max-width 0.5s;
+  -moz-transition: max-width 0.5s;
+  transition: max-width 0.5s;
+}
+.zinnia .cl-effect-11 a:hover::before {
+  max-width: 100%;
+}
+.zinnia .cl-effect-11 a:focus::before {
+  max-width: 100%;
+}
+.zinnia #header-search-box {
+  position: absolute;
+  right: 38px;
+  top: 8px;
+}
+.zinnia .search-form {
+  display: none;
+  width: 25%;
+  position: absolute;
+  min-width: 200px;
+  right: -6px;
+  top: 33px;
+}
+.zinnia #search-menu span {
+  font-size: 20px;
+}
+.zinnia #search-menu span .ion-ios-close-empty {
+  font-size: 40px;
+  line-height: 0;
+  position: relative;
+  top: -6px;
+}
+.zinnia #searchform {
+  position: relative;
+  border: 1px solid #ddd;
+  min-height: 42px;
+}
+.zinnia #searchform input[type=search] {
+  width: 100%;
+  border: none;
+  position: absolute;
+  left: 0;
+  padding: 10px 30px 10px 10px;
+  z-index: 99;
+}
+.zinnia #searchform button {
+  position: absolute;
+  right: 6px;
+  top: 4px;
+  z-index: 999;
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+.zinnia #searchform button span {
+  font-size: 22px;
+}
+.zinnia #site-footer {
+  padding: 10px 0 1.5em 0;
+}
+.zinnia .copyright {
+  text-align: center;
+  padding-top: 1em;
+  margin: 0;
+  border-top: 1px solid #eee;
+  color: #666;
+}
+.zinnia .overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+}
+.zinnia .overlay .overlay-close {
+  position: absolute;
+  right: 25px;
+  top: 10px;
+  padding: 0;
+  overflow: hidden;
+  border: none;
+  color: transparent;
+  background-color: transparent;
+  z-index: 100;
+}
+.zinnia .overlay-hugeinc.open .ion-ios-close-empty {
+  color: #000;
+  font-size: 50px;
+}
+.zinnia .overlay nav {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  height: 60%;
+  font-size: 54px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.zinnia .overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  height: 100%;
+  position: relative;
+}
+.zinnia .overlay ul li {
+  display: block;
+  height: 20%;
+  height: calc(100% / 5);
+  min-height: 54px;
+}
+.zinnia .overlay ul li a {
+  font-weight: 300;
+  display: block;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+.zinnia .overlay ul li a:hover,
+.zinnia .overlay ul li a:focus {
+  color: #000;
+}
+.zinnia .overlay-hugeinc {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+}
+.zinnia .overlay-hugeinc.open {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+.zinnia .overlay-hugeinc nav {
+  -webkit-perspective: 1200px;
+  perspective: 1200px;
+}
+.zinnia .overlay-hugeinc nav ul {
+  opacity: 0.4;
+  -webkit-transform: translateY(-25%) rotateX(35deg);
+  transform: translateY(-25%) rotateX(35deg);
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+}
+.zinnia .overlay-hugeinc.open nav ul {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.zinnia .overlay-hugeinc.close nav ul {
+  -webkit-transform: translateY(25%) rotateX(-35deg);
+  transform: translateY(25%) rotateX(-35deg);
+}
+@media (max-width: 991px) {
+  .zinnia .main-nav a {
+    margin-right: 20px;
+  }
+  .zinnia #header-search-box {
+    position: absolute;
+    right: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .zinnia #header-search-box {
+    right: 20px;
+    top: 9px;
+  }
+  .zinnia .main-nav {
+    margin-top: 2px;
+  }
+  .zinnia .btn-5 span {
+    display: none;
+  }
+  .zinnia .btn-5b:before {
+    left: 0;
+  }
+}
+@media (max-width: 431px) {
+  .zinnia .logo h1 {
+    margin-top: 8px;
+    font-size: 24px;
+  }
+  .zinnia .post {
+    background: #fff;
+    padding: 0 10px 0;
+  }
+  .zinnia .more-link {
+    font-size: 0.9em;
+    line-height: 100%;
+  }
+}
+@media screen and (max-height: 30.5em) {
+  .zinnia .overlay nav {
+    height: 70%;
+    font-size: 34px;
+  }
+  .zinnia .overlay ul li {
+    min-height: 34px;
+  }
+}
+.zinnia .widget {
+  background: #fff;
+  padding: 30px 0 0;
+}
+.zinnia .widget-title {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  padding: 10px 0 0;
+  font-weight: 400;
+}
+.zinnia .widget-recent-posts ul {
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+}
+.zinnia .widget-recent-posts ul li {
+  list-style-type: none;
+  position: relative;
+  line-height: 170%;
+  margin-bottom: 10px;
+}
+.zinnia .widget-recent-posts ul li::before {
+  content: '\f3d3';
+  font-family: "Ionicons";
+  position: absolute;
+  left: -17px;
+  top: 3px;
+  font-size: 16px;
+  color: #000;
+}
+.zinnia .widget-archives ul {
+  padding: 0;
+  margin: 0;
+  padding-left: 25px;
+}
+.zinnia .widget-archives ul li {
+  list-style-type: none;
+  position: relative;
+  line-height: 170%;
+  margin-bottom: 10px;
+}
+.zinnia .widget-archives ul li::before {
+  content: '\f3f3';
+  font-family: "Ionicons";
+  position: absolute;
+  left: -25px;
+  top: 1px;
+  font-size: 16px;
+  color: #000;
+}
+.zinnia .widget-category ul {
+  padding: 0;
+  margin: 0;
+  padding-left: 25px;
+}
+.zinnia .widget-category ul li {
+  list-style-type: none;
+  position: relative;
+  line-height: 170%;
+  margin-bottom: 10px;
+}
+.zinnia .widget-category ul li::before {
+  content: '\f3fe';
+  font-family: "Ionicons";
+  position: absolute;
+  left: -25px;
+  top: 1px;
+  font-size: 18px;
+  color: #000;
+}
+.zinnia .content-body {
+  padding-bottom: 4em;
+}
+.zinnia .post {
+  background: #fff;
+  padding: 30px 30px 0;
+}
+.zinnia .entry-title {
+  text-align: center;
+  font-size: 1.9em;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  padding: 10px 20px 0;
+}
+.zinnia .entry-meta {
+  text-align: center;
+  color: #DDDDDD;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+.zinnia .entry-content {
+  font-size: 18px;
+  line-height: 1.9;
+  font-weight: 300;
+  color: #000;
+}
+.zinnia .post-category,
+.zinnia .post-date,
+.zinnia .post-author {
+  position: relative;
+  padding-right: 15px;
+}
+.zinnia .post-category::after,
+.zinnia .post-date::after,
+.zinnia .post-author::after {
+  position: absolute;
+  content: '.';
+  color: #000;
+  font-size: 30px;
+  top: -22px;
+  right: 1px;
+}
+.zinnia .read-more {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  word-spacing: 1px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  margin-top: 20px;
+}
+.zinnia .cl-effect-14 a {
+  padding: 0 20px;
+  height: 45px;
+  line-height: 45px;
+  position: relative;
+  display: inline-block;
+  margin: 15px 25px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+}
+.zinnia .cl-effect-14 a::before,
+.zinnia .cl-effect-14 a::after {
+  position: absolute;
+  width: 45px;
+  height: 1px;
+  background: #C3C3C3;
+  content: '';
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+.zinnia .cl-effect-14 a::before {
+  top: 0;
+  left: 0;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+.zinnia .cl-effect-14 a::after {
+  right: 0;
+  bottom: 0;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transform-origin: 100% 0;
+  -moz-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+}
+.zinnia .cl-effect-14 a:hover::before,
+.zinnia .cl-effect-14 a:hover::after,
+.zinnia .cl-effect-14 a:focus::before,
+.zinnia .cl-effect-14 a:focus::after {
+  background: #000;
+}
+.zinnia .cl-effect-14 a:hover::before,
+.zinnia .cl-effect-14 a:focus::before {
+  left: 50%;
+  -webkit-transform: rotate(0deg) translateX(-50%);
+  -moz-transform: rotate(0deg) translateX(-50%);
+  transform: rotate(0deg) translateX(-50%);
+}
+.zinnia .cl-effect-14 a:hover::after,
+.zinnia .cl-effect-14 a:focus::after {
+  right: 50%;
+  -webkit-transform: rotate(0deg) translateX(50%);
+  -moz-transform: rotate(0deg) translateX(50%);
+  transform: rotate(0deg) translateX(50%);
+}
+
+/*# sourceMappingURL=screen.css.map */

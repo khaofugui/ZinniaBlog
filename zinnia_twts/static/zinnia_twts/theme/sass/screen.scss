@@ -1,0 +1,17 @@
+// Combine the partials into a single screen stylesheet.
+// under the body.zinnia class to avoid interferences
+.zinnia {
+  @import "partials/font";
+  @import "partials/general";
+  @import "partials/header";
+  @import "partials/logo";
+  @import "partials/main_navigation";
+  @import "partials/nav_hover_effect";
+  @import "partials/header_search_bar";
+  @import "partials/footer";
+  @import "partials/mobile_menu";
+  @import "partials/media_query";
+  @import "partials/widget";
+  @import "partials/home_blog";
+  @import "partials/read_more";
+}
