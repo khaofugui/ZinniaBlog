@@ -34,6 +34,9 @@
   /**
    * 4.1 - Read More Button CSS 3 style
    */
+  /**
+   * 10.0 - Contact Form
+   */
 }
 .zinnia * {
   outline: none;
@@ -87,6 +90,15 @@
 }
 .zinnia .height-40px {
   margin-bottom: 40px;
+}
+.zinnia .none-padding {
+  padding: 0 !important;
+}
+.zinnia .right-padding-30 {
+  padding: 0 30px 0 0 !important;
+}
+.zinnia .right-margin-30 {
+  margin-right: 30px;
 }
 .zinnia #site-header {
   background-color: #FFF;
@@ -405,7 +417,7 @@
   line-height: 170%;
   margin-bottom: 10px;
 }
-.zinnia .widget-archives ul li::before {
+.zinnia .widget-archives > ul > li::before {
   content: '\f3f3';
   font-family: "Ionicons";
   position: absolute;
@@ -547,6 +559,82 @@
   -webkit-transform: rotate(0deg) translateX(50%);
   -moz-transform: rotate(0deg) translateX(50%);
   transform: rotate(0deg) translateX(50%);
+}
+.zinnia form label {
+  display: block;
+  font-weight: bold;
+}
+.zinnia form fieldset {
+  padding: 0;
+  margin: 0;
+}
+.zinnia form legend {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.zinnia form input[type=email], .zinnia form input[type=url], .zinnia form input[type=text], .zinnia form input[type=password] {
+  border: 1px solid #aaa;
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 10px 10px;
+  font-size: 16px;
+  line-height: 100%;
+  transition: 0.4s border-color linear;
+}
+.zinnia form textarea {
+  border: 1px solid #aaa;
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 10px 10px;
+  font-size: 16px;
+  line-height: 20px !important;
+  min-height: 100px;
+  transition: 0.4s border-color linear;
+}
+.zinnia form ul.errorlist {
+  margin: 0;
+  padding: 0;
+}
+.zinnia form ul.errorlist li {
+  list-style: none;
+  display: inline;
+}
+.zinnia form input:focus, .zinnia form textarea:focus {
+  border-color: #666;
+}
+.zinnia .tag-cloud {
+  padding: 0;
+  font-size: 1.4em;
+  line-height: 1.68em;
+}
+.zinnia .tag-cloud li {
+  list-style: none;
+  display: inline;
+}
+.zinnia .tag-cloud .tag-1 {
+  font-size: 0.7em;
+}
+.zinnia .tag-cloud .tag-2 {
+  font-size: 0.93333em;
+}
+.zinnia .tag-cloud .tag-3 {
+  font-size: 1.05em;
+}
+.zinnia .tag-cloud .tag-4 {
+  font-size: 1.86667em;
+}
+.zinnia .tag-cloud .tag-5 {
+  font-size: 2.1em;
+}
+.zinnia .tag-cloud .tag-6 {
+  font-size: 2.8em;
+}
+.zinnia .current {
+  color: red;
+}
+.zinnia .comment-panel {
+  padding: 0 30px;
+  margin-right: -30px;
 }
 
 /*# sourceMappingURL=screen.css.map */

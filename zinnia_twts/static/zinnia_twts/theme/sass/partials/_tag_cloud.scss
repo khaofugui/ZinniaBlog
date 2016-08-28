@@ -1,0 +1,7 @@
+.tag-cloud {
+  @include tag-cloud(1.4em);
+}
+
+.current {
+  color: red;
+}

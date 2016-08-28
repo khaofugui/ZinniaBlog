@@ -17,28 +17,31 @@
                         {% with categories=object.categories.all %}
                             {% if categories|length %}
                                 {% for category in categories %}
+                                    <span class="post-category">
                                     <a href="{{ category.get_absolute_url }}"
                                        title="{% blocktrans %}Show all entries in {{ category }}{% endblocktrans %}"
                                        rel="tag category" itemprop="articleSection">{{ category }}</a>
-                                    {% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}.
+                                    </span>
+                                    {% if not forloop.last %}、{% endif %}{% endfor %}{% endif %}.
                         {% endwith %}
                     {% endblock entry-categories %}
                     {#                    <span class="post-category"><a href="#">Django 开发</a></span>#}
                     {% block entry-published %}
-                        <time class="published" datetime="{{ object.publication_date|date:"c" }}"
-                              itemprop="datePublished">{{ object.publication_date|date:"DATE_FORMAT" }}</time>
+                        <span class="post-date"><a href="#">
+                        <time class="published entry-date" datetime="{{ object.publication_date|date:"c" }}"
+                              itemprop="datePublished">{{ object.publication_date|date:"DATE_FORMAT" }}</time></a></span>
                     {% endblock entry-published %}
                     {#                    <span class="post-date"><a href="#"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">2013年 3月 1日</time></a></span>#}
                     {% block entry-authors %}
                         {% with authors=object.authors.all %}
                             {% if authors|length %}
                                 {% for author in authors %}
-                                    <span class="vcard author" itemprop="author" itemscope
+                                    <span class="vcard author post-author" itemprop="author" itemscope
                                           itemtype="http://schema.org/Person">
                         <a href="{{ author.get_absolute_url }}"
                            class="fn url{% if not author.get_full_name %} nickname{% endif %}" rel="author"
                            title="{% blocktrans %}Show all {{ author }}'s entries{% endblocktrans %}"
-                           itemprop="url">{{ author }}</a></span>{% if not forloop.last %}, {% endif %}
+                           itemprop="url">{{ author }}</a></span>{% if not forloop.last %}、{% endif %}
                                 {% endfor %}
                             {% endif %}
                         {% endwith %}
@@ -117,15 +120,15 @@
                     </div>
                 {% endif %}
             {% endblock entry-image %}
-{#            <div class="entry-content clearfix">#}
-{#                <p>Responsive web design offers us a way forward, finally allowing us to design for the ebb and flow of#}
-{#                    things. There are many variations of passages of Lorem Ipsum available, but the majority have#}
-{#                    suffered alteration in some form, by injected humour, or randomised words which don’t look even#}
-{#                    slightly.</p>#}
-{#                <div class="read-more cl-effect-14">#}
-{#                    <a href="#" class="more-link">继续阅读 <span class="meta-nav">→</span></a>#}
-{#                </div>#}
-{#            </div>#}
+            {#            <div class="entry-content clearfix">#}
+            {#                <p>Responsive web design offers us a way forward, finally allowing us to design for the ebb and flow of#}
+            {#                    things. There are many variations of passages of Lorem Ipsum available, but the majority have#}
+            {#                    suffered alteration in some form, by injected humour, or randomised words which don’t look even#}
+            {#                    slightly.</p>#}
+            {#                <div class="read-more cl-effect-14">#}
+            {#                    <a href="#" class="more-link">继续阅读 <span class="meta-nav">→</span></a>#}
+            {#                </div>#}
+            {#            </div>#}
             {% block entry-lead %}
                 {% if not continue_reading and object.lead %}
                     <div class="entry-content clearfix" itemprop="headline">
@@ -143,10 +146,13 @@
             {% block continue-reading %}
                 {% if continue_reading and object_content.has_more %}
                     <div class="read-more cl-effect-14">
-                        <a href="{{ object.get_absolute_url }}" title="{% blocktrans with object=object.title percent=object_content.remaining_percent|floatformat:0 %}{{ percent }}% of {{ object }} still remains to read.{% endblocktrans %}"
+                        <a href="{{ object.get_absolute_url }}" title="
+
+
+                                {% blocktrans with object=object.title percent=object_content.remaining_percent|floatformat:0 %}{{ percent }}% of {{ object }} still remains to read.{% endblocktrans %}"
                            rel="bookmark" itemprop="url" class="more-link">继续阅读<span class="meta-nav">→</span></a>
                     </div>
-{#                    <p class="continue-reading">#}
+                    {#                    <p class="continue-reading">#}
                     {#                        <a href="{{ object.get_absolute_url }}"#}
                     {#                           title="{% blocktrans with object=object.title percent=object_content.remaining_percent|floatformat:0 %}{{ percent }}% of {{ object }} still remains to read.{% endblocktrans %}"#}
                     {#                           rel="bookmark" itemprop="url">#}
@@ -158,7 +164,7 @@
         </div>
     {% endblock entry-body %}
 
-{#    {% block entry-footer %}#}
+    {#    {% block entry-footer %}#}
     {#        <footer class="entry-footer">#}
     {#            {% block entry-tags %}#}
     {#                <p class="entry-tags">#}

@@ -1,5 +1,8 @@
 // Combine the partials into a single screen stylesheet.
 // under the body.zinnia class to avoid interferences
+// Import the mixins
+@import "mixins/tag-cloud";
+
 .zinnia {
   @import "partials/font";
   @import "partials/general";
@@ -14,4 +17,7 @@
   @import "partials/widget";
   @import "partials/home_blog";
   @import "partials/read_more";
+  @import "partials/form";
+  @import "partials/tag_cloud";
+  @import "partials/comment";
 }

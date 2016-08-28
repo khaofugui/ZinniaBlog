@@ -51,7 +51,7 @@
   margin-bottom: 10px;
 }
 
-.widget-archives ul li::before {
+.widget-archives > ul > li::before {
   content: '\f3f3';
   font-family: "Ionicons";
   position: absolute;

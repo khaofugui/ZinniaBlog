@@ -1,0 +1,55 @@
+/**
+ * 10.0 - Contact Form
+ */
+form {
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  fieldset {
+    padding: 0;
+    margin: 0;
+  }
+  legend {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  input {
+    &[type=email],
+    &[type=url],
+    &[type=text],
+    &[type=password] {
+      border: 1px solid #aaa;
+      margin-bottom: 15px;
+      width: 100%;
+      padding: 10px 10px;
+      font-size: 16px;
+      line-height: 100%;
+      transition: 0.4s border-color linear;
+    }
+  }
+
+  textarea {
+    border: 1px solid #aaa;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 16px;
+    line-height: 20px !important;
+    min-height: 100px;
+    transition: 0.4s border-color linear;
+  }
+
+  ul.errorlist {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      display: inline;
+    }
+  }
+
+  input:focus, textarea:focus {
+    border-color: #666;
+  }
+}
