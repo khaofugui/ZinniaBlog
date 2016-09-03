@@ -20,9 +20,6 @@ def deploy():
 def _create_directory_structure_if_necessary(site_folder):
     run('mkdir -p %s/%s' % (site_folder, 'env'))
     run('mkdir -p %s/%s' % (site_folder, 'source'))
-    for sub_folder in (
-            'database', 'static', 'media'):
-        run('mkdir -p %s/%s' % (site_folder + '/source', sub_folder))
 
 
 def _get_latest_source(source_folder):
@@ -32,6 +29,10 @@ def _get_latest_source(source_folder):
         run('git clone %s %s' % (REPO_URL, source_folder))
     current_commit = local('git log -n 1 --format=%H', capture=True)
     run('cd %s && git reset --hard %s' % (source_folder, current_commit))
+
+    for sub_folder in (
+            'database', 'static', 'media'):
+        run('mkdir -p %s/%s' % (source_folder, sub_folder))
 
 
 def _update_virtualenv(source_folder):
