@@ -1,0 +1,5 @@
+Django==1.9.6
+django-app-namespace-template-loader==0.4.1
+django-blog-zinnia==0.17
+gunicorn==19.6.0
+

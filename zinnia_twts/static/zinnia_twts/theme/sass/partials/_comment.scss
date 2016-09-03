@@ -5,3 +5,15 @@
   padding: 0 30px;
   margin-right: -30px;
 }
+
+#comment-list {
+  padding-left: 0;
+  list-style: none;
+
+  .comment {
+    padding: 20px 0 0 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+}
+

@@ -571,6 +571,7 @@
 .zinnia form legend {
   font-weight: bold;
   font-size: 1.2em;
+  border: none;
 }
 .zinnia form input[type=email], .zinnia form input[type=url], .zinnia form input[type=text], .zinnia form input[type=password] {
   border: 1px solid #aaa;
@@ -635,6 +636,15 @@
 .zinnia .comment-panel {
   padding: 0 30px;
   margin-right: -30px;
+}
+.zinnia #comment-list {
+  padding-left: 0;
+  list-style: none;
+}
+.zinnia #comment-list .comment {
+  padding: 20px 0 0 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 
 /*# sourceMappingURL=screen.css.map */
