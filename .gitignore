@@ -95,5 +95,7 @@ fixtures/
 media/
 .idea
 
+config/email_setting.py
+
 migrations/
 !migrations/__init__.py

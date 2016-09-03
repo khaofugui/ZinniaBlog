@@ -1,5 +1,6 @@
 {% load i18n %}
 {% load zinnia %}
+{% load comments %}
 <article id="entry-{{ object.pk }}" class="post post-{{ object.pk }}{% if object.featured %} featured{% endif %}"
          itemscope itemtype="http://schema.org/Article">
     {% block entry-header %}
@@ -47,8 +48,8 @@
                         {% endwith %}
                     {% endblock entry-authors %}
                     {#                    <span class="post-author"><a href="#">追梦人物</a></span>#}
-
-                    <span class="comments-link"><a href="#">4 评论</a></span>
+                    {% get_comment_count for object as comment_count%}
+                    <span class="comments-link"><a href="#">{{ comment_count }} 评论</a></span>
                 </div>
                 {#    <p class="entry-info">#}
                 {#      {% block entry-authors %}#}
@@ -146,10 +147,7 @@
             {% block continue-reading %}
                 {% if continue_reading and object_content.has_more %}
                     <div class="read-more cl-effect-14">
-                        <a href="{{ object.get_absolute_url }}" title="
-
-
-                                {% blocktrans with object=object.title percent=object_content.remaining_percent|floatformat:0 %}{{ percent }}% of {{ object }} still remains to read.{% endblocktrans %}"
+                        <a href="{{ object.get_absolute_url }}" title="{% blocktrans with object=object.title percent=object_content.remaining_percent|floatformat:0 %}{{ percent }}% of {{ object }} still remains to read.{% endblocktrans %}"
                            rel="bookmark" itemprop="url" class="more-link">继续阅读<span class="meta-nav">→</span></a>
                     </div>
                     {#                    <p class="continue-reading">#}

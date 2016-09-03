@@ -2,8 +2,6 @@
   /**
    * 1.0 - Google Font
    */
-  @import url(http://fonts.useso.com/css?family=Lato:300,400);
-  @import url(http://fonts.useso.com/css?family=Ubuntu:300,400);
   /**
    * 2.0 - General Elements
    */
@@ -37,6 +35,9 @@
   /**
    * 10.0 - Contact Form
    */
+  /**
+   * 9.0 - Contact Page Social
+   */
 }
 .zinnia * {
   outline: none;
@@ -64,10 +65,10 @@
 }
 .zinnia body {
   color: #444;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Microsoft Yahei', sans-serif;
 }
 .zinnia p {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Microsoft Yahei', sans-serif;
   font-weight: 400;
   word-spacing: 1px;
   letter-spacing: 0.01em;
@@ -171,6 +172,8 @@
   padding: 0 0 5px 0 !important;
   max-width: 0;
   border-bottom: 1px solid #000;
+  white-space: nowrap;
+  /*add this for no line-break*/
   color: #000;
   content: attr(data-hover);
   -webkit-transition: max-width 0.5s;
@@ -469,7 +472,7 @@
 }
 .zinnia .entry-content {
   font-size: 18px;
-  line-height: 1.9;
+  line-height: 1.6;
   font-weight: 300;
   color: #000;
 }
@@ -645,6 +648,39 @@
   padding: 20px 0 0 0;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
+}
+.zinnia .social {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.zinnia .social li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+.zinnia .social li a {
+  border: 1px solid #888;
+  font-size: 22px;
+  color: #888;
+  transition: all 0.3s ease-in;
+}
+.zinnia .social li a:hover {
+  background-color: #333;
+  color: #fff;
+}
+.zinnia .facebook a {
+  padding: 12px 21px;
+}
+.zinnia .twitter a {
+  padding: 12px 15px;
+}
+.zinnia .google-plus a {
+  padding: 12px 15px;
+}
+.zinnia .tumblr a {
+  padding: 12px 20px;
 }
 
 /*# sourceMappingURL=screen.css.map */

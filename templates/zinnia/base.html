@@ -29,7 +29,7 @@
 
 {% block sidebar %}
     <div class="widget widget-recent-posts">
-        <h3 class="widget-title">Recent Posts</h3>
+        <h3 class="widget-title">{% trans "Recent entries" %}</h3>
         {% get_recent_entries %}
         {#            <li>#}
         {#                <a href="#">Adaptive Vs. Responsive Layouts And Optimal Text Readability</a>#}
@@ -42,12 +42,12 @@
         {#            </li>#}
     </div>
     <div class="widget widget-archives">
-        <h3 class="widget-title">Archives</h3>
+        <h3 class="widget-title">{% trans "Archives" %}</h3>
         {% get_archives_entries_tree %}
     </div>
 
     <div class="widget widget-category">
-        <h3 class="widget-title">Category</h3>
+        <h3 class="widget-title">{% trans "Categories" %}</h3>
         {% get_categories %}
     </div>
 

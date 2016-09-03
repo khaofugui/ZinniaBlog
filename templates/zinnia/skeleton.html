@@ -8,14 +8,7 @@
         Weblog</title>
     <meta name="robots" content="follow, all"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="
-
-
-
-
-
-
-            {% block meta-description %}{% trans "Just another Zinnia weblog." %}{% endblock meta-description %}{% block meta-description-page %}{% endblock meta-description-page %}"/>
+    <meta name="description" content="{% block meta-description %}{% trans "Just another Zinnia weblog." %}{% endblock meta-description %}{% block meta-description-page %}{% endblock meta-description-page %}"/>
     <meta name="keywords" content="{% block meta-keywords %}django, blog, weblog, zinnia{% endblock meta-keywords %}"/>
     <meta name="author" content="Fantomas42"/>
     {% block meta %}{% endblock meta %}
@@ -23,6 +16,7 @@
     <link rel="shortcut icon" href="{% static "zinnia/theme/img/favicon.ico" %}"/>
     <link rel="home" href="{% url 'zinnia:entry_archive_index' %}"/>
     <link rel="stylesheet" href="{% static "zinnia_twts/bootstrap/css/bootstrap.min.css" %}"/>
+    <link rel="stylesheet" href="{% static "zinnia_twts/theme/css/github.css" %}"/>
     <link rel="stylesheet" href="{% static "zinnia_twts/ionicon/css/ionicons.min.css" %}"/>
     <link rel="stylesheet" type="text/css" media="screen, projection"
           href="{% static "zinnia_twts/theme/css/screen.css" %}"/>
@@ -37,7 +31,7 @@
     <script src="{% static 'zinnia_twts/theme/js/modernizr.custom.js' %}"></script>
     {% block script %}{% endblock script %}
 </head>
-<body class="zinnia">
+<body class="zinnia" {% block single_page %}{% endblock %}>
 <div class="container">
     <header id="site-header">
         <div class="row">
@@ -56,10 +50,10 @@
 
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="cl-effect-11"><a href="{% url 'zinnia:entry_archive_index' %}" title="Zinnia's Weblog" rel="home" data-hover="Home">Home</a></li>
-                            <li class="cl-effect-11"><a href="full-width.html" data-hover="Blog">Blog</a></li>
-                            <li class="cl-effect-11"><a href="about.html" data-hover="About">About</a></li>
-                            <li class="cl-effect-11"><a href="contact.html" data-hover="Contact">Contact</a></li>
+                            <li class="cl-effect-11"><a href="{% url 'zinnia:entry_archive_index' %}" title="Zinnia's Weblog" rel="home" data-hover="主页">主页</a></li>
+                            <li class="cl-effect-11"><a href="{% url 'zinnia_twts:width_entry_index' %}" data-hover="博客">博客</a></li>
+                            <li class="cl-effect-11"><a href="{% url 'zinnia_twts:about' %}" data-hover="关于">关于</a></li>
+                            <li class="cl-effect-11"><a href="{% url 'zinnia_twts:contact' %}" data-hover="联系我">联系我</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </nav>
@@ -79,10 +73,13 @@
     </header>
     <div class="copyrights">Collect from <a href="http://www.cssmoban.com/">网页模板</a></div>
     {% block slider %}{% endblock slider %}
+    {% block content_body %}
     <div class="content-body">
         <div class="container">
             <div class="row">
-                <main class="col-md-8">
+                {% block page_width %}
+                    <main class="col-md-8">
+                {% endblock %}
                     <div id="content" class="hfeed" role="main">
                         {% block content %}
                             <div class="links">
@@ -115,6 +112,7 @@
             </div>
         </div>
     </div>
+    {% endblock %}
 </div>
 {#      <header id="header" role="banner">#}
 {#        <nav>#}
@@ -158,8 +156,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <p class="copyright">Powered by <a href="http://www.djangoproject.com">Django</a> and
-                    <a href="https://github.com/Fantomas42/django-blog-zinnia">Zinnia {{ ZINNIA_VERSION }}</a>Copiright&copy;2016-2016
+                <p class="copyright">&copy; 2016-2016 Powered by <a href="http://www.djangoproject.com">Django 1.9</a> and
+                    <a href="https://github.com/Fantomas42/django-blog-zinnia">Zinnia {{ ZINNIA_VERSION }}</a>
                 </p>
             </div>
         </div>
@@ -170,10 +168,10 @@
     <button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="full-width.html">Blog</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="{% url 'zinnia:entry_archive_index' %}">主页</a></li>
+            <li><a href="{% url 'zinnia_twts:width_entry_index' %}">博客</a></li>
+            <li><a href="{% url 'zinnia_twts:about' %}">关于</a></li>
+            <li><a href="{% url 'zinnia_twts:contact' %}">联系我</a></li>
         </ul>
     </nav>
 </div>

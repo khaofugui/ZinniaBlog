@@ -35,6 +35,7 @@
               href="{% url 'zinnia:entry_trackback_feed' year month day object.slug %}"/>
     {% endwith %}
 {% endblock link %}
+{% block single_page %}id="single"{% endblock %}
 
 {% block content %}
 
