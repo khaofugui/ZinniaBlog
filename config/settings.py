@@ -133,9 +133,9 @@ ZINNIA_MARKDOWN_EXTENSIONS = ['markdown.extensions.extra', 'markdown.extensions.
 from .email_setting import EMAIL_HOST_PASSWORD, EMAIL_HOST_USER
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.163.com'
-EMAIL_PORT = 25
+EMAIL_HOST = 'smtp.mxhichina.com'
+EMAIL_PORT = 465
 EMAIL_HOST_USER = EMAIL_HOST_USER  # add your own accounts for local test
 EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
-EMAIL_USE_TLS = True
+EMAIL_USE_SSL = True
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
