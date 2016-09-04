@@ -1,7 +1,7 @@
 {% load i18n %}
 {% load zinnia %}
 {% load comments %}
-<article id="entry-{{ object.pk }}" class="post post-{{ object.pk }}{% if object.featured %} featured{% endif %}"
+<article id="entry-{{ object.pk }}" class="post post-{{ object.pk }}{% if object.featured %} featured{% endif %}{% block single_page %} single{% endblock %}"
          itemscope itemtype="http://schema.org/Article">
     {% block entry-header %}
         <header class="entry-header">
@@ -97,7 +97,7 @@
     {% endblock entry-header %}
 
     {% block entry-body %}
-        <div class="entry-body">
+        <div class="entry-body content-body">
             {% block entry-word-count %}
                 <meta itemprop="wordCount" content="{{ object.word_count }}"/>
             {% endblock entry-word-count %}
@@ -139,7 +139,7 @@
             {% endblock entry-lead %}
 
             {% block entry-content %}
-                <div class="entry-content" itemprop="articleBody">
+                <div class="entry-content clearfix" itemprop="articleBody">
                     {{ object_content|safe }}
                 </div>
             {% endblock entry-content %}
