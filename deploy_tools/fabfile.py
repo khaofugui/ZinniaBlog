@@ -71,4 +71,4 @@ def _update_settings(source_folder, site_name):
     append(setting_path, '\nfrom .secret_key import SECRET_KEY')
 
     config_path = source_folder + '/config'
-    run('cd %s && touch email_setting.py && cat "EMAIL_HOST_USER=''\nEMAIL_HOST_PASSWORD=''"' % config_path)
+    run('cd %s && touch email_setting.py && cat > "EMAIL_HOST_USER=''\nEMAIL_HOST_PASSWORD=''"' % config_path)
