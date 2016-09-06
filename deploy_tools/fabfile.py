@@ -57,7 +57,7 @@ def _update_database(source_folder):
 
 def _update_settings(source_folder, site_name):
     setting_path = source_folder + '/config/settings.py'
-    # sed(setting_path, "DEBUG = True", "DEBUG = False")
+    sed(setting_path, "DEBUG = True", "DEBUG = False")
     sed(
         setting_path,
         'ALLOWED_HOSTS =.+$',
@@ -69,3 +69,6 @@ def _update_settings(source_folder, site_name):
         key = ''.join(random.SystemRandom().choice(chars) for _ in range(50))
         append(secret_key_file, "SECRET_KEY = '%s'" % key)
     append(setting_path, '\nfrom .secret_key import SECRET_KEY')
+
+    config_path = source_folder + '/config'
+    run('cd %s && touch email_setting.py && cat "EMAIL_HOST_USER=''\nEMAIL_HOST_PASSWORD=''"' % config_path)
